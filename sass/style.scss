@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu|Lato');
+$color-primary: #5a5aff;
+$color-background: #fff;
+$color-font: #333333;
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: $color-background;
+    font-size: 15px;
+    font-family: 'Lato', sans-serif;
+    color: $color-font;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+#hamburger {
+    display: inline-block;
+    cursor: pointer;
+    .line {
+        width: 30px;
+        height: 3px;
+        background-color: $color-primary;
+        display: block;
+        margin: 6px auto;
+        transition: all 0.3s ease-in-out;
+    }
+}
+#hamburger.is-active {
+    .line {
+        &:nth-child(2) {
+            opacity: 0;
+        }
+
+        &:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+        }
+
+        &:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+    }
+}
+.site-header {
+    &__container {
+        @extend .container;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.menu {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: none;
+    &__item {
+        list-style-type: none;
+    }
+    &__link {
+        padding: 5px 0;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        font-weight: 600;
+        font-family: 'Ubuntu', sans-serif;
+        &:hover {
+            color: $color-primary;
+        }
+    }
+}
+.logo {
+    padding: 5px 0;
+    cursor: pointer;
+    &__image {
+        display: inline-block;
+        max-width: 50px;
+        position: relative;
+    }
+    &__text {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.2em;
+        font-weight: 600;
+        color: $color-primary;
+    }
+}
+@import 'rwd';
