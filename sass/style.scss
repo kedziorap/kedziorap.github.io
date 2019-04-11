@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu|Lato');
 $color-primary: #5a5aff;
 $color-background: #fff;
+$color-transparent: rgba(136, 136, 136, 0.5);
 $color-font: #333333;
+$header-height: 60px;
 * {
     box-sizing: border-box;
 }
 body {
+    position: relative;
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -34,6 +37,7 @@ a {
     padding: 0 12px;
 }
 #hamburger {
+    z-index:2;
     display: inline-block;
     cursor: pointer;
     .line {
@@ -61,6 +65,7 @@ a {
     }
 }
 .site-header {
+    height: $header-height;
     &__container {
         @extend .container;
         display: flex;
@@ -72,25 +77,38 @@ a {
 .menu {
     margin: 0;
     padding: 0;
+    bottom: 100%;
+    left: 0;
+    background: $color-transparent;
     width: 100%;
-    display: none;
+    min-height: 100vh;
+    position: absolute;
+    transition: 0.4s;
+    &--active {
+        bottom: 0;
+    }
     &__item {
         list-style-type: none;
+        &:first-of-type {
+            margin-top: $header-height;
+        }
     }
     &__link {
-        padding: 5px 0;
-        display: inline-block;
-        width: 100%;
-        text-align: center;
-        font-weight: 600;
-        font-family: 'Ubuntu', sans-serif;
-        &:hover {
-            color: $color-primary;
-        }
+       display: inline-block;
+       text-transform: uppercase;
+       font-weight: 600;
+       font-size: 1.8em;
+       width: 100%;
+       text-align: center;
+       padding: 10px 0;
+       &:hover {
+           background: $color-primary;
+       }
     }
 }
 .logo {
     padding: 5px 0;
+    z-index: 2;
     cursor: pointer;
     &__image {
         display: inline-block;

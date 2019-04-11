@@ -5,14 +5,10 @@
     .container {
         max-width: 1170px;
     }
-    #hamburger {
-        display: none;
-    }
     .menu {
-        width: auto;
-        display: flex;
-        &__link {
-            padding: 10px 20px;
+        &__item{
+            margin: 0 auto;
+            max-width: 1170px;
         }
     }
 }

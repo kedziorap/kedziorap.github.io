@@ -3,6 +3,7 @@
   box-sizing: border-box; }
 
 body {
+  position: relative;
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -30,6 +31,7 @@ a {
   padding: 0 12px; }
 
 #hamburger {
+  z-index: 2;
   display: inline-block;
   cursor: pointer; }
   #hamburger .line {
@@ -47,31 +49,44 @@ a {
 #hamburger.is-active .line:nth-child(3) {
   transform: translateY(-9px) rotate(-45deg); }
 
-.site-header__container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center; }
+.site-header {
+  height: 60px; }
+  .site-header__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; }
 
 .menu {
   margin: 0;
   padding: 0;
+  bottom: 100%;
+  left: 0;
+  background: rgba(136, 136, 136, 0.5);
   width: 100%;
-  display: none; }
+  min-height: 100vh;
+  position: absolute;
+  transition: 0.4s; }
+  .menu--active {
+    bottom: 0; }
   .menu__item {
     list-style-type: none; }
+    .menu__item:first-of-type {
+      margin-top: 60px; }
   .menu__link {
-    padding: 5px 0;
     display: inline-block;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.8em;
     width: 100%;
     text-align: center;
-    font-weight: 600;
-    font-family: 'Ubuntu', sans-serif; }
+    padding: 10px 0; }
     .menu__link:hover {
-      color: #5a5aff; }
+      background: #5a5aff; }
 
 .logo {
   padding: 5px 0;
+  z-index: 2;
   cursor: pointer; }
   .logo__image {
     display: inline-block;
@@ -93,13 +108,8 @@ a {
   .container, .site-header__container {
     max-width: 1170px; }
 
-  #hamburger {
-    display: none; }
-
-  .menu {
-    width: auto;
-    display: flex; }
-    .menu__link {
-      padding: 10px 20px; } }
+  .menu__item {
+    margin: 0 auto;
+    max-width: 1170px; } }
 
 /*# sourceMappingURL=style.css.map */
