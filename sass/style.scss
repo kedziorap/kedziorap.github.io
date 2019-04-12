@@ -31,7 +31,7 @@ a {
     width: 100%;
     margin: 0 auto;
 }
-.container {
+%container {
     width: 100%;
     margin: 0 auto;
     padding: 0 12px;
@@ -70,8 +70,10 @@ a {
     position: fixed;
     left: 0;
     right: 0;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 1px $color-font;
     &__container {
-        @extend .container;
+        @extend %container;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -138,10 +140,9 @@ a {
     &__slogan {
         text-align: center;
         width: 100%;
-        transform: translateY(-40px)
     }
     &__container {
-        @extend .container;
+        @extend %container;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -171,6 +172,87 @@ a {
     cursor: pointer;
     font-weight: 600;
 }
+.about {
+    min-height: 100vh;
+    &__container {
+        @extend %container;
+        min-height: calc(100vh - 64px);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    &__photo {
+        text-align: center;
+    }
+    &__img {
+        border-radius: 3px;
+        max-width: 300px;
+        filter: grayscale(60%);
+    }
+    &__paragraph {
+        line-height: 1.5;
+        font-weight: 100;
+    }
+}
+.title {
+    text-transform: uppercase;
+    font-family: 'Teko', sans-serif;
+    font-size: 3em;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    color: $color-primary;
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 60%;
+        background: $color-primary;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%)
+    }
+}
+.icon {
+    margin: 10px;
+    font-size: 3em;
+    color: $color-primary;
+    &:hover {
+        color: $color-font;
+    }
+}
+.skills{
+    min-height: 100vh;
+    &__container {
+        @extend %container;
+        min-height: calc(100vh - 64px);
+    }
+}
+.skill {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    &__icons {
+        display: flex;
+        justify-content: space-around;
+        i {
+            font-size: 6em;
+        }
+    }
+    &__description {
+        @extend .about__paragraph;
+        text-align: center;
+    }
+}
+.portfolio {
+    &__container {
+        padding: 20px 0;
+    }
+}
 @keyframes logo {
     from {
         transform: rotate(0)
@@ -178,4 +260,5 @@ a {
         transform: rotate(360deg)
     }
 }
+
 @import 'rwd';

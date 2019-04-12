@@ -25,7 +25,7 @@ a {
   width: 100%;
   margin: 0 auto; }
 
-.container, .site-header__container, .welcome__container {
+.site-header__container, .welcome__container, .about__container, .skills__container {
   width: 100%;
   margin: 0 auto;
   padding: 0 12px; }
@@ -54,7 +54,9 @@ a {
   z-index: 1;
   position: fixed;
   left: 0;
-  right: 0; }
+  right: 0;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 1px #333333; }
   .site-header__container {
     display: flex;
     flex-wrap: wrap;
@@ -112,8 +114,7 @@ a {
   height: 100vh; }
   .welcome__slogan {
     text-align: center;
-    width: 100%;
-    transform: translateY(-40px); }
+    width: 100%; }
   .welcome__container {
     display: flex;
     flex-wrap: wrap;
@@ -141,6 +142,72 @@ a {
   cursor: pointer;
   font-weight: 600; }
 
+.about {
+  min-height: 100vh; }
+  .about__container {
+    min-height: calc(100vh - 64px);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+  .about__photo {
+    text-align: center; }
+  .about__img {
+    border-radius: 3px;
+    max-width: 300px;
+    filter: grayscale(60%); }
+  .about__paragraph, .skill__description {
+    line-height: 1.5;
+    font-weight: 100; }
+
+.title {
+  text-transform: uppercase;
+  font-family: 'Teko', sans-serif;
+  font-size: 3em;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  color: #5a5aff; }
+  .title::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 60%;
+    background: #5a5aff;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); }
+
+.icon {
+  margin: 10px;
+  font-size: 3em;
+  color: #5a5aff; }
+  .icon:hover {
+    color: #333333; }
+
+.skills {
+  min-height: 100vh; }
+  .skills__container {
+    min-height: calc(100vh - 64px); }
+
+.skill {
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column; }
+  .skill__icons {
+    display: flex;
+    justify-content: space-around; }
+    .skill__icons i {
+      font-size: 6em; }
+  .skill__description {
+    text-align: center; }
+
+.portfolio__container {
+  padding: 20px 0; }
+
 @keyframes logo {
   from {
     transform: rotate(0); }
@@ -150,7 +217,7 @@ a {
   .wrapper {
     max-width: 1900px; }
 
-  .container, .site-header__container, .welcome__container {
+  .site-header__container, .welcome__container, .about__container, .skills__container {
     max-width: 1170px; }
 
   .menu__item {
@@ -160,11 +227,34 @@ a {
   .welcome__title {
     font-size: 6em; }
     .welcome__title--sub {
-      font-size: 2.5em; } }
-@media (min-width: 992px) {
+      font-size: 2.5em; }
+
+  .about__container {
+    flex-direction: row; }
+  .about__photo {
+    width: 50%; }
+  .about__text {
+    width: 50%; }
+  .about__paragraph, .skill__description {
+    font-size: 1.2em; }
+
+  .skill {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center; }
+    .skill--reverse .skill__icons {
+      order: 2; }
+    .skill__icons {
+      width: 50%; }
+    .skill__description {
+      width: 50%; } }
+@media (min-width: 993px) {
   .welcome__title {
     font-size: 7em; }
     .welcome__title--sub {
-      font-size: 2.9em; } }
+      font-size: 2.9em; }
+
+  .about__paragraph, .skill__description {
+    font-size: 1.4em; } }
 
 /*# sourceMappingURL=style.css.map */
