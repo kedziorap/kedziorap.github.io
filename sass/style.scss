@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu|Lato');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu|Lato|Teko');
 $color-primary: #5a5aff;
 $color-background: #fff;
 $color-transparent: rgba(136, 136, 136, 0.5);
@@ -66,6 +66,10 @@ a {
 }
 .site-header {
     height: $header-height;
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    right: 0;
     &__container {
         @extend .container;
         display: flex;
@@ -85,7 +89,7 @@ a {
     position: absolute;
     transition: 0.4s;
     &--active {
-        bottom: 0;
+        bottom: calc( -100vh + #{$header-height});
     }
     &__item {
         list-style-type: none;
@@ -110,6 +114,9 @@ a {
     padding: 5px 0;
     z-index: 2;
     cursor: pointer;
+    &:hover .logo__image img{
+        animation: logo 0.5s;
+    }
     &__image {
         display: inline-block;
         max-width: 50px;
@@ -123,6 +130,52 @@ a {
         font-size: 1.2em;
         font-weight: 600;
         color: $color-primary;
+    }
+}
+.welcome {
+    min-height: 300px;
+    height: 100vh;
+    &__slogan {
+        text-align: center;
+        width: 100%;
+        transform: translateY(-40px)
+    }
+    &__container {
+        @extend .container;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        height: 100%;
+    }
+    &__title {
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 0;
+        font-size: 4em;
+        font-family: 'Teko', sans-serif;
+        &--sub {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 1.65em;
+            color: $color-primary;
+            margin-bottom: 30px;
+        }
+    }
+}
+.btn {
+    border: 1px solid $color-font;
+    color: $color-font;
+    background-color: transparent;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 600;
+}
+@keyframes logo {
+    from {
+        transform: rotate(0)
+    } to {
+        transform: rotate(360deg)
     }
 }
 @import 'rwd';
