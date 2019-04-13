@@ -188,6 +188,27 @@ a {
   .icon:hover {
     color: #333333; }
 
+.icons {
+  text-align: center; }
+  .icons__icon {
+    display: inline-block;
+    margin: 0 5px;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    color: #333333;
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s; }
+    .icons__icon:hover {
+      color: #fff;
+      background-color: #333333; }
+    .icons__icon i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+
 .skills {
   min-height: 100vh; }
   .skills__container {
@@ -201,12 +222,77 @@ a {
     display: flex;
     justify-content: space-around; }
     .skill__icons i {
-      font-size: 6em; }
+      font-size: 5em; }
   .skill__description {
     text-align: center; }
 
 .portfolio__container {
   padding: 20px 0; }
+.portfolio__project {
+  margin: 10px 0; }
+.portfolio__thumb {
+  position: relative; }
+  .portfolio__thumb img {
+    filter: grayscale(60%); }
+.portfolio__description {
+  background-color: rgba(90, 90, 255, 0.5);
+  overflow: hidden;
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 10px; }
+.portfolio__title {
+  margin: 5px 0;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  text-align: center; }
+
+.to-modal {
+  display: none; }
+
+.modal {
+  overflow: auto;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  z-index: 5;
+  min-height: 100vh;
+  width: 100%; }
+  .modal__container {
+    display: block;
+    height: calc(100vh - 20px); }
+  .modal__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    padding: 10px 15px;
+    color: #fff;
+    background: #333333;
+    cursor: pointer; }
+  .modal__inside {
+    max-width: 500px;
+    padding-top: 50px;
+    margin: 0 auto;
+    font-size: 1.2em;
+    position: relative; }
+    .modal__inside h3 {
+      font-size: 2em;
+      margin-top: 0;
+      margin-bottom: 10px; }
+    .modal__inside a {
+      display: inline-block;
+      padding: 10px 15px;
+      margin-left: 10px;
+      margin-bottom: 30px;
+      background-color: #5a5aff;
+      color: #fff;
+      border-radius: 2px;
+      transition: 0.2s; }
+      .modal__inside a:hover {
+        background-color: #333333; }
 
 @keyframes logo {
   from {

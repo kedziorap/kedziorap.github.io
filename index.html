@@ -1,139 +1,251 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Piotr Kędziora</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <div class="wrapper">
-        <header class="site-header">
-            <nav class="site-header__container">
-                <div class="logo">
-                    <div class="logo__image">
-                        <img src="img/logo.png" alt="logo">
-                        <span class="logo__text">PK</span>
-                    </div>
-                </div>
-                <div id="hamburger">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
-                </div>
-                <ul class="menu">
-                    <li class="menu__item"><a href="#about" class="menu__link">O mnie</a></li>
-                    <li class="menu__item"><a href="#skills" class="menu__link">Umiejętności</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Portfolio</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Kontakt</a></li>
-                </ul>
-            </nav>
-        </header>
-        <section class="welcome">
-            <div class="welcome__container">
-                <div class="welcome__slogan">
-                    <h1 class="welcome__title">Piotr Kędziora</h1>
-                <h2 class="welcome__title welcome__title--sub">Front End Developer</h2>
-                <button class="btn">Poznaj mnie</button>
-                </div>
+      <header class="site-header">
+        <nav class="site-header__container">
+          <div class="logo">
+            <div class="logo__image">
+              <img src="img/logo.png" alt="logo" />
+              <span class="logo__text">PK</span>
             </div>
-        </section>
-        <section class="about">
-                <h2 id="about" class="title">O mnie</h2>
-            <div class="about__container">
-                <div class="about__photo">
-                    <img class="about__img" src="img/ja.png" alt="">
-                    <div class="icons">
-                        <a href="#"><i class="fab fa-github-square icon"></i></a>
-                        <a href="#"><i class="fab fa-facebook icon"></i></a>
-                        <a href="#"><i class="fab fa-instagram icon"></i></a>
-                        <a href="#"><i class="fab fa-twitter-square icon"></i></a>
-                    </div>
-                </div>
-                <div class="about__text">
-                    <p class="about__paragraph">
-                        Jestem początkującym Front End Developerem ze Szczecina. Szukanie i tworzenie nowych rozwiązań jest moją pasją. Lubię poznawać nowe technologie i wykorzystywać je w praktyce. Poza tworzeniem stron internetowych interesuję się piłką nożną, bieganiem i genealogią. Chciałbym rozpocząć pracę jako Junior Front End Developer pod okiem doświadczonego Seniora, który pomoże mi rozwijać moje umiejętności.
-                    </p>
-                </div>
+          </div>
+          <div id="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </div>
+          <ul class="menu">
+            <li class="menu__item">
+              <a href="#about" class="menu__link">O mnie</a>
+            </li>
+            <li class="menu__item">
+              <a href="#skills" class="menu__link">Umiejętności</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Portfolio</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Kontakt</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <section class="welcome">
+        <div class="welcome__container">
+          <div class="welcome__slogan">
+            <h1 class="welcome__title">Piotr Kędziora</h1>
+            <h2 class="welcome__title welcome__title--sub">
+              Front End Developer
+            </h2>
+            <button class="btn">Poznaj mnie</button>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <h2 id="about" class="title">O mnie</h2>
+        <div class="about__container">
+          <div class="about__photo">
+            <img class="about__img" src="img/ja.png" alt="" />
+            <div class="icons">
+              <a href="#"><i class="fab fa-github-square icon"></i></a>
+              <a href="#"><i class="fab fa-facebook icon"></i></a>
+              <a href="#"><i class="fab fa-instagram icon"></i></a>
+              <a href="#"><i class="fab fa-twitter-square icon"></i></a>
             </div>
-        </section>
-        <section id ="skills" class="skills">
-            <h2 class="title">Umiejętności</h2>
-            <div class="skills__container">
-                <div class="skill">
-                    <div class="skill__icons">
-                            <i class="fab fa-html5"></i>
-                            <i class="fab fa-css3-alt"></i>
-                            <i class="fab fa-bootstrap"></i>
-                    </div>
-                    <p class="skill__description">
-                        Znam języki HTML i CSS na dobrym poziomie. Staram się tworzyć poprawny semantycznie kod. Znam preprocesory CSS - SASS i LESS. Potrafię stworzyć stronę od podstaw jak i stosując popularny framework Bootstrap.
-                    </p>
-                </div>
-                <div class="skill skill--reverse">
-                        <div class="skill__icons">
-                                <i class="fab fa-js-square"></i>
-                                <i class="fab fa-node-js"></i>
-                                <i class="fab fa-react"></i>
-                        </div>
-                        <p class="skill__description">
-                            Stosuję język JavaScript do ożywiania witryn internetowych. Potrafię tworzyć skrypty z wykorzystaniem jQuery jak i w VanillaJS. Znam środowisko NodeJS - umiem zbudować aplikacje internetowe w oparciu o popularny framework ExpressJS. Znam podstawy Reacta i Reduxa.
-                        </p>
-                </div>
-                <div class="skill">
-                        <div class="skill__icons">
-                                <i class="fab fa-wordpress"></i>
-                                <i class="fas fa-database"></i>
-                                <i class="fab fa-git-square"></i>
-                        </div>
-                        <p class="skill__description">
-                            Potrafię dostosować projekt do Wordpressa i stworzyć w pełni dynamiczną stronę internetową. Znam język SQL - potrafię tworzyć, edytować i filtrować wyniki w bazach danych. Przy tworzeniu projektów korzystam z systemu kontrolii wersji GIT.
-                        </p>
-                </div>
-                <div class="skill skill--reverse">
-                        <div class="skill__icons">
-                                <i class="fas fa-camera-retro"></i>
-                                <i class="fas fa-images"></i>
-                                <i class="fas fa-video"></i>
-                        </div>
-                        <p class="skill__description">
-                            Potrafię zakodować stronę na podstawie dostarczonego wzoru graficznego PSD. Znam obsługę PhotoShopa - potrafię edytować i restaurować zdjęcia. Umiem zsynchronizwoać bibliotekę zdjęć w usłudze Google. Przegrywam kasety VHS na formaty cyfrowe.
-                        </p>
-                </div>
-                <div class="skill skill">
-                        <div class="skill__icons">
-                                <i class="fas fa-shopping-basket"></i>
-                                <i class="fas fa-users"></i>
-                                <i class="fas fa-user-edit"></i>
-                        </div>
-                        <p class="skill__description">
-                            Mam doświadczenie w sprzedaży internetowej i obsłudze klienta. Miałem okazje pracować w sprzedaży na serwisach aukcyjnych. Jestem osobą zmotywowaną i lubiącą się uczyć.
-                        </p>
-                </div>
+          </div>
+          <div class="about__text">
+            <p class="about__paragraph">
+              Jestem początkującym Front End Developerem ze Szczecina. Szukanie
+              i tworzenie nowych rozwiązań jest moją pasją. Lubię poznawać nowe
+              technologie i wykorzystywać je w praktyce. Poza tworzeniem stron
+              internetowych interesuję się piłką nożną, bieganiem i genealogią.
+              Chciałbym rozpocząć pracę jako Junior Front End Developer pod
+              okiem doświadczonego Seniora, który pomoże mi rozwijać moje
+              umiejętności.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="skills" class="skills">
+        <h2 class="title">Umiejętności</h2>
+        <div class="skills__container">
+          <div class="skill">
+            <div class="skill__icons">
+              <i class="fab fa-html5"></i>
+              <i class="fab fa-css3-alt"></i>
+              <i class="fab fa-bootstrap"></i>
             </div>
-        </section>
-        <section class="portfolio">
-            <h2 class="title">portfolio</h2>
-            <div class="portfolio__container">
-                <div class="portfolio__project">
-                    <img src="img/dino.jpg" alt="dino">
-                    <div class="portfolio__description">
-                        <h3 class="portfolio__title">Dino</h3>
-                    </div>
-                </div>
+            <p class="skill__description">
+              Znam języki HTML i CSS na dobrym poziomie. Staram się tworzyć
+              poprawny semantycznie kod. Znam preprocesory CSS - SASS i LESS.
+              Potrafię stworzyć stronę od podstaw jak i stosując popularny
+              framework Bootstrap.
+            </p>
+          </div>
+          <div class="skill skill--reverse">
+            <div class="skill__icons">
+              <i class="fab fa-js-square"></i>
+              <i class="fab fa-node-js"></i>
+              <i class="fab fa-react"></i>
             </div>
-        </section>
+            <p class="skill__description">
+              Stosuję język JavaScript do ożywiania witryn internetowych.
+              Potrafię tworzyć skrypty z wykorzystaniem jQuery jak i w
+              VanillaJS. Znam środowisko NodeJS - umiem zbudować aplikacje
+              internetowe w oparciu o popularny framework ExpressJS. Znam
+              podstawy Reacta i Reduxa.
+            </p>
+          </div>
+          <div class="skill">
+            <div class="skill__icons">
+              <i class="fab fa-wordpress"></i>
+              <i class="fas fa-database"></i>
+              <i class="fab fa-git-square"></i>
+            </div>
+            <p class="skill__description">
+              Potrafię dostosować projekt do Wordpressa i stworzyć w pełni
+              dynamiczną stronę internetową. Znam język SQL - potrafię tworzyć,
+              edytować i filtrować wyniki w bazach danych. Przy tworzeniu
+              projektów korzystam z systemu kontrolii wersji GIT.
+            </p>
+          </div>
+          <div class="skill skill--reverse">
+            <div class="skill__icons">
+              <i class="fas fa-camera-retro"></i>
+              <i class="fas fa-images"></i>
+              <i class="fas fa-video"></i>
+            </div>
+            <p class="skill__description">
+              Potrafię zakodować stronę na podstawie dostarczonego wzoru
+              graficznego PSD. Znam obsługę PhotoShopa - potrafię edytować i
+              restaurować zdjęcia. Umiem zsynchronizwoać bibliotekę zdjęć w
+              usłudze Google. Przegrywam kasety VHS na formaty cyfrowe.
+            </p>
+          </div>
+          <div class="skill skill">
+            <div class="skill__icons">
+              <i class="fas fa-shopping-basket"></i>
+              <i class="fas fa-users"></i>
+              <i class="fas fa-user-edit"></i>
+            </div>
+            <p class="skill__description">
+              Mam doświadczenie w sprzedaży internetowej i obsłudze klienta.
+              Miałem okazje pracować w sprzedaży na serwisach aukcyjnych. Jestem
+              osobą zmotywowaną i lubiącą się uczyć.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="portfolio">
+        <h2 class="title">portfolio</h2>
+        <div class="portfolio__container">
+          <div class="portfolio__project">
+            <div class="portfolio__thumb">
+              <img src="img/dino.jpg" alt="dino" />
+              <div class="portfolio__description">
+                <h3 class="portfolio__title">Jurassic World</h3>
+                <div class="icons">
+                  <span class="icons__icon"><i class="fas fa-info"></i></span>
+                  <span class="icons__icon"
+                    ><a
+                      href="https://github.com/kedziorap/dino-island"
+                      target="_blank"
+                      ><i class="fas fa-code"></i></a
+                  ></span>
+                  <span class="icons__icon"
+                    ><a
+                      href="https://kedziorap.github.io/dino-island/"
+                      target="_blank"
+                      ><i class="fas fa-eye"></i></a
+                  ></span>
+                </div>
+                <div class="to-modal">
+                  Strona wykonana ramach przećwiczenia RWD. W projekcie
+                  wielopoziomowe menu, w wersji mobile oparte o checkboxy.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio__project">
+            <div class="portfolio__thumb">
+              <img src="img/dino.jpg" alt="dino" />
+              <div class="portfolio__description">
+                <h3 class="portfolio__title">Jurassic World</h3>
+                <div class="icons">
+                  <span class="icons__icon"><i class="fas fa-info"></i></span>
+                  <span class="icons__icon"
+                    ><a
+                      href="https://github.com/kedziorap/dino-island"
+                      target="_blank"
+                      ><i class="fas fa-code"></i></a
+                  ></span>
+                  <span class="icons__icon"
+                    ><a
+                      href="https://kedziorap.github.io/dino-island/"
+                      target="_blank"
+                      ><i class="fas fa-eye"></i></a
+                  ></span>
+                </div>
+                <div class="to-modal">
+                  <h3>Jurassic World</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                    doloremque libero expedita tempora voluptatem facilis minima
+                    accusamus eius, hic deserunt. Et accusamus perspiciatis
+                    velit cumque nihil fugiat odit totam magni.
+                  </p>
+                  Użyte technologie:
+                  <ul>
+                    <li>html</li>
+                    <li>css</li>
+                  </ul>
+                  <a
+                    href="https://github.com/kedziorap/dino-island"
+                    target="_blank"
+                    >Kod</a
+                  >
+                  <a
+                    href="https://kedziorap.github.io/dino-island/"
+                    target="_blank"
+                    >Live</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+ 
     </div>
     <script
-        src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous">
-    </script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-	<script src="js/script.js"></script>
-</body>
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
