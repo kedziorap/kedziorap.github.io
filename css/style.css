@@ -9,7 +9,7 @@ body {
   min-height: 100vh;
   background-color: #fff;
   font-size: 15px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Arial', sans-serif;
   color: #333333; }
 
 img {
@@ -25,7 +25,7 @@ a {
   width: 100%;
   margin: 0 auto; }
 
-.site-header__container, .welcome__container, .about__container, .skills__container {
+.site-header__container, .welcome__container, .about__container, .skills__container, .portfolio__container, .contact__container {
   width: 100%;
   margin: 0 auto;
   padding: 0 12px; }
@@ -68,7 +68,7 @@ a {
   padding: 0;
   bottom: 100%;
   left: 0;
-  background: rgba(136, 136, 136, 0.5);
+  background: rgba(53, 53, 53, 0.9);
   width: 100%;
   min-height: 100vh;
   position: absolute;
@@ -82,6 +82,7 @@ a {
   .menu__link {
     display: inline-block;
     text-transform: uppercase;
+    color: #fff;
     font-weight: 600;
     font-size: 1.8em;
     width: 100%;
@@ -181,15 +182,10 @@ a {
     left: 50%;
     transform: translateX(-50%); }
 
-.icon {
-  margin: 10px;
-  font-size: 3em;
-  color: #5a5aff; }
-  .icon:hover {
-    color: #333333; }
-
 .icons {
   text-align: center; }
+  .icons--contact {
+    margin: 40px 0; }
   .icons__icon {
     display: inline-block;
     margin: 0 5px;
@@ -208,6 +204,16 @@ a {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%); }
+  .icons > a {
+    display: inline-block;
+    width: 40%; }
+    .icons > a .icon {
+      display: inline-block;
+      width: 100%;
+      font-size: 8em;
+      color: #333333; }
+      .icons > a .icon:hover {
+        color: #5a5aff; }
 
 .skills {
   min-height: 100vh; }
@@ -229,13 +235,15 @@ a {
 .portfolio__container {
   padding: 20px 0; }
 .portfolio__project {
-  margin: 10px 0; }
+  padding: 5px;
+  margin: 10px 10px;
+  box-shadow: 0 0 5px 0 black; }
 .portfolio__thumb {
   position: relative; }
   .portfolio__thumb img {
     filter: grayscale(60%); }
 .portfolio__description {
-  background-color: rgba(90, 90, 255, 0.5);
+  background-color: rgba(90, 90, 255, 0.8);
   overflow: hidden;
   color: #fff;
   position: absolute;
@@ -294,6 +302,18 @@ a {
       .modal__inside a:hover {
         background-color: #333333; }
 
+.contact {
+  padding: 40px 0; }
+
+.footer-site {
+  background-color: #333333;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  padding: 20px; }
+  .footer-site p {
+    margin: 0; }
+
 @keyframes logo {
   from {
     transform: rotate(0); }
@@ -303,7 +323,7 @@ a {
   .wrapper {
     max-width: 1900px; }
 
-  .site-header__container, .welcome__container, .about__container, .skills__container {
+  .site-header__container, .welcome__container, .about__container, .skills__container, .portfolio__container, .contact__container {
     max-width: 1170px; }
 
   .menu__item {
@@ -333,7 +353,36 @@ a {
     .skill__icons {
       width: 50%; }
     .skill__description {
-      width: 50%; } }
+      width: 50%; }
+
+  .portfolio__container {
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 0 10px 0 black;
+    margin-top: 20px;
+    padding: 0; }
+  .portfolio__thumb {
+    overflow: hidden; }
+    .portfolio__thumb:hover .portfolio__description {
+      bottom: 0; }
+  .portfolio__project {
+    width: 50%;
+    box-shadow: none;
+    margin: 0;
+    padding: 0; }
+  .portfolio__description {
+    transition: 0.2s;
+    height: 100%;
+    padding-top: 22%;
+    bottom: 100%; }
+  .portfolio__title {
+    width: 100%; }
+
+  .icons--icon {
+    margin: 50px 0; }
+  .icons > a {
+    width: auto;
+    margin: 10px; } }
 @media (min-width: 993px) {
   .welcome__title {
     font-size: 7em; }

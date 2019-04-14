@@ -49,6 +49,45 @@
             width: 50%;
         }
     }
+    .portfolio {
+        &__container {
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: 0 0 10px 0 black;
+            margin-top: 20px;
+            padding: 0;
+        }
+        &__thumb {
+            overflow: hidden;
+            &:hover .portfolio__description{
+                bottom:0;
+            }
+        }
+        &__project {
+            width: 50%;
+            box-shadow: none;
+            margin: 0;
+            padding: 0;
+        }
+        &__description {
+            transition: 0.2s;
+            height: 100%;
+            padding-top: 22%;
+            bottom:100%;
+        }
+        &__title {
+            width: 100%;
+        }
+    }
+    .icons {
+        &--icon {
+            margin: 50px 0;
+        }
+        > a {
+            width: auto;
+            margin: 10px;
+        }
+    }
 }
 @media(min-width: 993px) {
     .welcome {
